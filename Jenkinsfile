@@ -26,10 +26,10 @@ pipeline{
         }
        }
        stage('Deploy'){
-        steps{
-            sh "docker run -itd -p 3000:3000 266948012606.dkr.ecr.us-east-1.amazonaws.com/assignment-mod5-tapas:v${BUILD_NUMBER}"
+         steps{
+             sh "docker run -itd -p 90:3000 266948012606.dkr.ecr.us-east-1.amazonaws.com/assignment-mod5-tapas:v${BUILD_NUMBER}"
+            }
         }
-       }
        
     }
     post{
