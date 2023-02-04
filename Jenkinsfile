@@ -8,7 +8,7 @@ pipeline{
         retry (3)
     }
     parameters{
-        string(name: 'BRANCH', defaultValue: 'main')
+        string(name: 'BRANCH', defaultValue: 'master')
         }
    
     stages{
