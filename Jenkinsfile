@@ -27,7 +27,7 @@ pipeline{
        }
        stage('Deploy'){
          steps{
-             sh "docker pull 713973836604.dkr.ecr.us-east-1.amazonaws.com/assignment:v${BUILD_NUMBER}"
+             sh "docker pull 266948012606.dkr.ecr.us-east-1.amazonaws.com/assignment:v${BUILD_NUMBER}"
              sh '''
              if [ "$( docker container inspect -f '{{.State.Running}}' assignmentpod )" == "true" ];
              then docker stop assignmentpod
