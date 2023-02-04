@@ -29,7 +29,7 @@ pipeline{
          steps{
              sh "docker pull 266948012606.dkr.ecr.us-east-1.amazonaws.com/assignment-mod5-tapas:v${BUILD_NUMBER}"
              sh '''
-             if [ "$( docker container inspect -f '{{.State.Running}}' assignmentpod )" == "true" ]
+             if ("$( docker container inspect -f '{{.State.Running}}' assignmentpod )" == "true")
              then 
                 docker rm -f assignmentpod
              fi
