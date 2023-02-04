@@ -2,7 +2,7 @@ module "ec2_instance_bastion" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 
-  name = "single-instance"
+  name = "bastion-instance"
 
   ami                    = "ami-00874d747dde814fa"
   instance_type          = "t2.micro"
@@ -22,7 +22,7 @@ module "ec2_instance_jenkis" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 
-  name = "single-instance"
+  name = "jenkins-instance"
 
   ami                    = "ami-00874d747dde814fa"
   instance_type          = "t2.micro"
@@ -42,7 +42,7 @@ module "ec2_instance_app" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 
-  name = "single-instance"
+  name = "app-instance"
 
   ami                    = "ami-00874d747dde814fa"
   instance_type          = "t2.micro"
