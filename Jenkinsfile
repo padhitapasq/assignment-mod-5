@@ -34,7 +34,7 @@ pipeline{
     }
     post{
         always{
-            sh "Suceessful Running!!"
+            sh "echo Suceessful Running!!"
         }
     }
 
